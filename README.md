@@ -17,48 +17,48 @@ To make a repo:- `git init cookbook` -> cookbook is repo name.
 * Optional argument is the name of the directory to create, otherwise the repo will be created in the current directory.
 * Creates a .git directory that stores all the repo information.
 
-ls .git -> it is a hidden file. This .git directory is the location of commit history for git. Most of the time you don't need to touch the contents of .git directory but there is one very
+`ls .git` -> it is a hidden file. This .git directory is the location of commit history for git. Most of the time you don't need to touch the contents of .git directory but there is one very
 useful file .git/config. Config is a pointtext file and it is in .ini format
 you don't want to modify files info/, objects/ and refs/ directly because that's where git actually stores the git history.
 
 GIT Config:-
 
-git config <key> [<value>]
+`git config <key> [<value>]`
 
 - git config allows you to read and write values to Git's config files.
 - By default it uses .git/config
 Use the --global flag to use ~/.gitconfig
 - You'll need to set your name and email address:
 
-git config --global user.name "arjungoel"
-git config --global user.email "arjungoel1995@gmail.com"
+`git config --global user.name "arjungoel"`
+`git config --global user.email "arjungoel1995@gmail.com"`
 
 The .gitconfig file is a global config file that lives in the home directory.
 Everytime you make a commit git stores the information about who has made that commit.
 
-git status
+`git status`
 
 - git status tells you the status of the files in your repo: what is new, what has changed, what's been deleted.
 - git status is always safe to run, and will never change or break anything in your repo and sometimes it gives suggestions what you want to do next.
 
-git add <file>
+`git add <file>`
 
 - It just not add one file at a time, you can add directories as well. When you are going to add a directory it's going to recursively operate on every file in that directory.
 - git add looks at the file what it is at that point of time and stages it to commit. If you do further modifications to that file after doing git add git will not automatically pick up all
 those changes. When you are doing git add you are telling git I want to add this file as it is at that point in time to be deframed when I form a commit.
 
-git add . -> It will add all the files.
+`git add .` -> It will add all the files.
 
 
-git commit
+`git commit`
 
 - git commit creates a new commit based on the file you've marked using git add.
 - A commit message is required: Git will open your text editor so you can write one.
 - you can use the -m flag to provide a message on the command line.
 
-git commit -m "initial commit"    
+`git commit -m "initial commit"`    
             OR
-git commit --message "initial commit"
+`git commit --message "initial commit"`
 
 The above commands are same.
 
@@ -73,16 +73,16 @@ To commit a change to the repo, do the following:
 
 Special case: to delete a file from the repo, use
 
-git rm <file> - it is exactly like how you would use git add.
+`git rm <file>` - it is exactly like how you would use git add.
 
-git add is the thing that says the upcoming commit should match the current state of my file system.
+`git add` is the thing that says the upcoming commit should match the current state of my file system.
 
 
-git log -> displays a log of all the commits from most recent to least recent. Use the arrow keys to scroll, press "Q" to quit.
+`git log` -> displays a log of all the commits from most recent to least recent. Use the arrow keys to scroll, press "Q" to quit.
 
 Viewing a commit:-
 
-git show <hash> -> displays detailed information about a particular commit. The hash argument is optional, defaults to current commit. Use the arrow keys to scroll, press "Q" to quit. If you
+`git show <hash>` -> displays detailed information about a particular commit. The hash argument is optional, defaults to current commit. Use the arrow keys to scroll, press "Q" to quit. If you
 don't provide any arguments to `git show` it's going to default to whatever the commit you are currently sitting on right now.
 
 - The `git hash` is a number that is calculated based on the contents of the commit, the person who made the commit (name and email address) and the time that commit was made as well as the
