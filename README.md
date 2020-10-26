@@ -21,6 +21,8 @@ To make a repo:- `git init cookbook` -> cookbook is repo name.
 useful file .git/config. Config is a pointtext file and it is in .ini format
 you don't want to modify files info/, objects/ and refs/ directly because that's where git actually stores the git history.
 
+`ls -a` -> This command is used to get all the hidden files in the repository.
+
 GIT Config:-
 
 `git config <key> [<value>]`
